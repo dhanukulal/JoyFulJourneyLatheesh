@@ -48,6 +48,9 @@
 
 	<!-- Theme style  -->
 	<link rel="stylesheet" href="css/style.css">
+<!-- Owl Carousel CSS -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
 
 	<!-- Modernizr JS -->
 	<script src="js/modernizr-2.6.2.min.js"></script>
@@ -262,7 +265,7 @@ h2 {
 	
 
 
-	<div id="fh5co-gallery" class="fh5co-section-gray">
+	<!-- <div id="fh5co-gallery" class="fh5co-section-gray">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box">
@@ -382,7 +385,40 @@ h2 {
 				</div>
 			</div>
 		</div>
+	</div> -->
+	<div id="fh5co-gallery" class="fh5co-section-gray">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box">
+					<h2>Gallery</h2>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+					<div id="image-slider" class="owl-carousel owl-theme">
+						<div class="item"><img src="images/LP2.jpg" alt="Image 2"></div>
+						<div class="item"><img src="images/LP3.jpg" alt="Image 3"></div>
+						<div class="item"><img src="images/LP4.jpg" alt="Image 4"></div>
+						<div class="item"><img src="images/LP5.jpg" alt="Image 5"></div>
+						<div class="item"><img src="images/LP6.jpg" alt="Image 6"></div>
+						<div class="item"><img src="images/LP7.jpg" alt="Image 7"></div>
+						<div class="item"><img src="images/LP8.jpg" alt="Image 8"></div>
+						<div class="item"><img src="images/LP9.jpg" alt="Image 9"></div>
+						<div class="item"><img src="images/LP10.jpg" alt="Image 10"></div>
+						<div class="item"><img src="images/LP11.jpg" alt="Image 11"></div>
+						<div class="item"><img src="images/LP12.jpg" alt="Image 12"></div>
+						<div class="item"><img src="images/LP13.jpg" alt="Image 13"></div>
+						<div class="item"><img src="images/LP14.jpg" alt="Image 14"></div>
+						<div class="item"><img src="images/LP15.jpg" alt="Image 15"></div>
+						<div class="item"><img src="images/LP16.jpg" alt="Image 16"></div>
+						<div class="item"><img src="images/LP17.jpg" alt="Image 17"></div>
+						<div class="item"><img src="images/LP18.jpg" alt="Image 18"></div>
+					</div>
+				</div>
+			</div>
+		</div>
 	</div>
+	
 
 
 
@@ -427,12 +463,29 @@ h2 {
 				countdown: true
 			});
 		}
+		$("#image-slider").owlCarousel({
+        loop: true,  // Infinite loop
+        margin: 10,  // Space between images
+        nav: false,  // Hide navigation arrows
+        autoplay: true,  // Enable auto-slide
+        autoplayTimeout: 2000,  // Slide every 1 second (1000ms)
+        autoplayHoverPause: true,  // Pause on hover
+        responsive: {
+            0: { items: 1 },  // Show 1 image at a time on mobile
+            600: { items: 2 },  // Show 2 images at a time on tablets
+            1000: { items: 3 }  // Show 3 images at a time on desktop
+        }
+    });
 
     });
 </script>
 
 	<!-- jQuery -->
 	<script src="js/jquery.min.js"></script>
+	<!-- jQuery (Required for Owl Carousel) -->
+<!-- Owl Carousel JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
     <!-- clock -->
 	<script src="js/clock.js"></script>
 	<!-- jQuery Easing -->
